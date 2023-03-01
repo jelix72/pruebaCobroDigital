@@ -4,13 +4,13 @@
 $arregloDetalles = array();
 $nombreArchivo = "REND.REV-REVC8496.REV-20191125.txt";
 if (!$file = fopen($nombreArchivo, "r")) {
-    echo "No se ha podido abrir el archivo " . $nombreArchivo;
+    echo "No se ha podido abrir el archivo <b>" . $nombreArchivo . "</b>";
 } else {
     $nroRegistros = 0;
     $subtotalMonto = 0;
     $medioDePago = "PagoDirecto Galicia";
-    echo "Nombre del Archivo a procesar: " . $nombreArchivo . "<br>";
-    echo "Nombre del Medio de Pago: " . $medioDePago . "<br><br>";
+    echo "Nombre del Archivo a procesar: <b>" . $nombreArchivo . "</b><br>";
+    echo "Nombre del Medio de Pago: <b>" . $medioDePago . "</b><br><br>";
     echo "<table id='tabla_instrumentos' class='table table-hover' style='width:50%; text-align: center; font-size: 12pt;' border='1'>";
     echo "<thead><tr><th class='text-center' style='width: 10%'>NRO TRANSACCIÓN</th>";
     echo "<th class='text-center' style='width: 10%'>MONTO</th>";
@@ -68,13 +68,13 @@ fclose($file);
 // Procesamiento archivo rend-cob* PagoDirecto Galicia
 $nombreArchivo = "REND.COB-COBC8496.COB-20191125.TXT.2019";
 if (!$file = fopen($nombreArchivo, "r")) {
-    echo "No se ha podido abrir el archivo " . $nombreArchivo;
+    echo "No se ha podido abrir el archivo <b>" . $nombreArchivo . "</b>";
 } else {
     $nroRegistros = 0;
     $subtotalMonto = 0;
     $medioDePago = "PagoDirecto Galicia";
-    echo "Nombre del Archivo a procesar: " . $nombreArchivo . "<br>";
-    echo "Nombre del Medio de Pago: " . $medioDePago . "<br><br>";
+    echo "Nombre del Archivo a procesar: <b>" . $nombreArchivo . "</b><br>";
+    echo "Nombre del Medio de Pago: <b>" . $medioDePago . "</b><br><br>";
     echo "<table id='tabla_instrumentos' class='table table-hover' style='width:50%; text-align: center; font-size: 12pt;' border='1'>";
     echo "<thead><tr><th class='text-center' style='width: 10%'>NRO TRANSACCIÓN</th>";
     echo "<th class='text-center' style='width: 10%'>MONTO</th>";
@@ -132,13 +132,13 @@ fclose($file);
 // Procesamiento archivo PlusPagos
 $nombreArchivo = "888ENTES5723_308.txt.2021";
 if (!$file = fopen($nombreArchivo, "r")) {
-    echo "No se ha podido abrir el archivo " . $nombreArchivo;
+    echo "No se ha podido abrir el archivo <b>" . $nombreArchivo . "</b>";
 } else {
     $nroRegistros = 0;
     $subtotalMonto = 0;
     $medioDePago = "PlusPagos";
-    echo "Nombre del Archivo a procesar: " . $nombreArchivo . "<br>";
-    echo "Nombre del Medio de Pago: " . $medioDePago . "<br><br>";
+    echo "Nombre del Archivo a procesar: <b>" . $nombreArchivo . "</b><br>";
+    echo "Nombre del Medio de Pago: <b>" . $medioDePago . "</b><br><br>";
     echo "<table id='tabla_instrumentos' class='table table-hover' style='width:50%; text-align: center; font-size: 12pt;' border='1'>";
     echo "<thead><tr><th class='text-center' style='width: 10%'>NRO TRANSACCIÓN</th>";
     echo "<th class='text-center' style='width: 10%'>MONTO</th>";
