@@ -1,6 +1,6 @@
 <?php
 
-// Procesamiento archivo rend-rev* PagoDirecto
+// Procesamiento archivo rend-rev* PagoDirecto Galicia
 $arregloDetalles = array();
 $nombreArchivo = "REND.REV-REVC8496.REV-20191125.txt";
 if (!$file = fopen($nombreArchivo, "r")) {
@@ -8,7 +8,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
 } else {
     $nroRegistros = 0;
     $subtotalMonto = 0;
-    $medioDePago = "PagoDirecto";
+    $medioDePago = "PagoDirecto Galicia";
     echo "Nombre del Archivo a procesar: " . $nombreArchivo . "<br>";
     echo "Nombre del Medio de Pago: " . $medioDePago . "<br><br>";
     echo "<table id='tabla_instrumentos' class='table table-hover' style='width:50%; text-align: center; font-size: 12pt;' border='1'>";
@@ -57,22 +57,22 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "</tbody></table>";
     echo '<pre>';
     echo "Cantidad de registros de datos contabilizados: " . $nroRegistros . "<br>";
-    echo "Total Monto Archivo calculado: $ " . $subtotalMonto . "<br>";
+    echo "Total Monto Archivo calculado: $ " . number_format($subtotalMonto, 2, ",", ".") . "<br>";
     echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
-    echo "Total Importe del Archivo informado: $ " . $importe . "<br>";
+    echo "Total Importe del Archivo informado: $ " . number_format($importe, 2, ",", ".") . "<br>";
     echo '</pre><br><hr><br>';
 }
 fclose($file);
-// Fin procesamiento archivo rend-rev* PagoDirecto
+// Fin procesamiento archivo rend-rev* PagoDirecto Galicia
 
-// Procesamiento archivo rend-cob* PagoDirecto
+// Procesamiento archivo rend-cob* PagoDirecto Galicia
 $nombreArchivo = "REND.COB-COBC8496.COB-20191125.TXT.2019";
 if (!$file = fopen($nombreArchivo, "r")) {
     echo "No se ha podido abrir el archivo " . $nombreArchivo;
 } else {
     $nroRegistros = 0;
     $subtotalMonto = 0;
-    $medioDePago = "PagoDirecto";
+    $medioDePago = "PagoDirecto Galicia";
     echo "Nombre del Archivo a procesar: " . $nombreArchivo . "<br>";
     echo "Nombre del Medio de Pago: " . $medioDePago . "<br><br>";
     echo "<table id='tabla_instrumentos' class='table table-hover' style='width:50%; text-align: center; font-size: 12pt;' border='1'>";
@@ -121,13 +121,13 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "</tbody></table>";
     echo '<pre>';
     echo "Cantidad de registros de datos contabilizados: " . $nroRegistros . "<br>";
-    echo "Total Monto Archivo calculado: $ " . $subtotalMonto . "<br>";
+    echo "Total Monto Archivo calculado: $ " . number_format($subtotalMonto, 2, ",", ".") . "<br>";
     echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
-    echo "Total Importe del Archivo informado: $ " . $importe . "<br>";
+    echo "Total Importe del Archivo informado: $ " . number_format($importe, 2, ",", ".") . "<br>";
     echo '</pre><br><hr><br>';
 }
 fclose($file);
-// Fin procesamiento archivo rend-cob* PagoDirecto
+// Fin procesamiento archivo rend-cob* PagoDirecto Galicia
 
 // Procesamiento archivo PlusPagos
 $nombreArchivo = "888ENTES5723_308.txt.2021";
@@ -180,9 +180,9 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "</tbody></table>";
     echo '<pre>';
     echo "Cantidad de registros de datos contabilizados: " . $nroRegistros . "<br>";
-    echo "Total Monto Archivo calculado: $ " . $subtotalMonto . "<br>";
+    echo "Total Monto Archivo calculado: $ " . number_format($subtotalMonto, 2, ",", ".") . "<br>";
     echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
-    echo "Total Importe del Archivo informado: $ " . $importe . "<br>";
+    echo "Total Importe del Archivo informado: $ " . number_format($importe, 2, ",", "."). "<br>";
     echo "Cantidad de Transacciones informadas en archivo: " . intval($cantidaDeTRX) . "<br>";
     echo '</pre>';
 }
