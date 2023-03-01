@@ -56,10 +56,10 @@ if (!$file = fopen($nombreArchivo, "r")) {
     }
     echo "</tbody></table>";
     echo '<pre>';
-    echo "Cantidad de registros de datos contabilizados: " . $nroRegistros . "<br>";
-    echo "Total Monto Archivo calculado: $ " . number_format($subtotalMonto, 2, ",", ".") . "<br>";
-    echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
-    echo "Total Importe del Archivo informado: $ " . number_format($importe, 2, ",", ".") . "<br>";
+    echo "Cantidad de registros de datos contabilizados: <b>" . $nroRegistros . "</b><br>";
+    echo "Total Monto Archivo calculado: <b>$ " . number_format($subtotalMonto, 2, ",", ".") . "</b><br>";
+    echo "Cantidad de registros de datos informados en archivo: <b>" . intval($cantidadDeRegistros) . "</b><br>";
+    echo "Total Importe del Archivo informado: <b>$ " . number_format($importe, 2, ",", ".") . "</b><br>";
     echo '</pre><br><hr><br>';
 }
 fclose($file);
@@ -120,10 +120,10 @@ if (!$file = fopen($nombreArchivo, "r")) {
     }
     echo "</tbody></table>";
     echo '<pre>';
-    echo "Cantidad de registros de datos contabilizados: " . $nroRegistros . "<br>";
-    echo "Total Monto Archivo calculado: $ " . number_format($subtotalMonto, 2, ",", ".") . "<br>";
-    echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
-    echo "Total Importe del Archivo informado: $ " . number_format($importe, 2, ",", ".") . "<br>";
+    echo "Cantidad de registros de datos contabilizados: <b>" . $nroRegistros . "</b><br>";
+    echo "Total Monto Archivo calculado: <b>$ " . number_format($subtotalMonto, 2, ",", ".") . "</b><br>";
+    echo "Cantidad de registros de datos informados en archivo: <b>" . intval($cantidadDeRegistros) . "</b><br>";
+    echo "Total Importe del Archivo informado: <b>$ " . number_format($importe, 2, ",", ".") . "</b><br>";
     echo '</pre><br><hr><br>';
 }
 fclose($file);
@@ -179,11 +179,11 @@ if (!$file = fopen($nombreArchivo, "r")) {
     }
     echo "</tbody></table>";
     echo '<pre>';
-    echo "Cantidad de registros de datos contabilizados: " . $nroRegistros . "<br>";
-    echo "Total Monto Archivo calculado: $ " . number_format($subtotalMonto, 2, ",", ".") . "<br>";
-    echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
-    echo "Total Importe del Archivo informado: $ " . number_format($importe, 2, ",", "."). "<br>";
-    echo "Cantidad de Transacciones informadas en archivo: " . intval($cantidaDeTRX) . "<br>";
+    echo "Cantidad de registros de datos contabilizados: <b>" . $nroRegistros . "</b><br>";
+    echo "Total Monto Archivo calculado: <b>$ " . number_format($subtotalMonto, 2, ",", ".") . "</b><br>";
+    echo "Cantidad de registros de datos informados en archivo: <b>" . intval($cantidadDeRegistros) . "</b><br>";
+    echo "Total Importe del Archivo informado: <b>$ " . number_format($importe, 2, ",", "."). "</b><br>";
+    echo "Cantidad de Transacciones informadas en archivo: <b>" . intval($cantidaDeTRX) . "</b><br>";
     echo '</pre>';
 }
 fclose($file);
