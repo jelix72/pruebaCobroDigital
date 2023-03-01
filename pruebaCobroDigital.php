@@ -1,7 +1,6 @@
 <?php
 
 // Procesamiento archivo rend-rev* PagoDirecto Galicia
-$arregloDetalles = array();
 $nombreArchivo = "REND.REV-REVC8496.REV-20191125.txt";
 if (!$file = fopen($nombreArchivo, "r")) {
     echo "No se ha podido abrir el archivo <b>" . $nombreArchivo . "</b>";
