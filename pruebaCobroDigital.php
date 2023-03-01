@@ -59,7 +59,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "Total Monto Archivo calculado: $ " . $subtotalMonto . "<br>";
     echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
     echo "Total Importe del Archivo informado: $ " . $importe . "<br>";
-    echo '</pre><br>';
+    echo '</pre><br><hr><br>';
 }
 fclose($file);
 
@@ -123,7 +123,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "Total Monto Archivo calculado: $ " . $subtotalMonto . "<br>";
     echo "Cantidad de registros de datos informados en archivo: " . intval($cantidadDeRegistros) . "<br>";
     echo "Total Importe del Archivo informado: $ " . $importe . "<br>";
-    echo '</pre><br>';
+    echo '</pre><br><hr><br>';
 }
 fclose($file);
 // Fin procesamiento archivo rend-cob* PagoDirecto
