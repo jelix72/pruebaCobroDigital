@@ -1,5 +1,6 @@
 <?php
 
+// Procesamiento archivo rend-rev* PagoDirecto
 $arregloDetalles = array();
 $nombreArchivo = "REND.REV-REVC8496.REV-20191125.txt";
 if (!$file = fopen($nombreArchivo, "r")) {
@@ -19,7 +20,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "<tbody id='resultados'>";
     while ($linea = fgets($file)) {
         if (substr($linea, 0, 4) == "0000") {
-            // Procesar Cabecera Header
+            // Procesar Cabecera 0000
             $tipoRegistro = substr($linea, 0, 4);
             $nroDePrestacion = substr($linea, 4, 4);
             $servicio = substr($linea, 8, 1);
@@ -45,7 +46,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
                 echo "</tr>";
             }
         } elseif (substr($linea, 0, 4) == "9999") {
-            // Procesar Pie Trailer
+            // Procesar Pie 9999
             $tipoDeRegistro = substr($linea, 0, 4);
             $cantidadDeRegistros = substr($linea, 39, 7);
             $importeParteEntera = substr($linea, 25, 12);
@@ -62,7 +63,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo '</pre><br><hr><br>';
 }
 fclose($file);
-
+// Fin procesamiento archivo rend-rev* PagoDirecto
 
 // Procesamiento archivo rend-cob* PagoDirecto
 $nombreArchivo = "REND.COB-COBC8496.COB-20191125.TXT.2019";
@@ -83,7 +84,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
     echo "<tbody id='resultados'>";
     while ($linea = fgets($file)) {
         if (substr($linea, 0, 4) == "0000") {
-            // Procesar Cabecera Header
+            // Procesar Cabecera 0000
             $tipoRegistro = substr($linea, 0, 4);
             $nroDePrestacion = substr($linea, 4, 4);
             $servicio = substr($linea, 8, 1);
@@ -109,7 +110,7 @@ if (!$file = fopen($nombreArchivo, "r")) {
                 echo "</tr>";
             }
         } elseif (substr($linea, 0, 4) == "9999") {
-            // Procesar Pie Trailer
+            // Procesar Pie 9999
             $tipoDeRegistro = substr($linea, 0, 4);
             $cantidadDeRegistros = substr($linea, 39, 7);
             $importeParteEntera = substr($linea, 25, 12);
